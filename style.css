@@ -1,0 +1,160 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  overflow: hidden;
+  background: lightskyblue;
+}
+
+.container{
+  position: relative;
+  max-height: 80vmax;
+  width: 30rem;
+  padding: 4rem 3rem 3rem 3rem;
+  margin: 5rem auto;
+  background: cornflowerblue;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.task-input{
+  display: flex;
+  background: whitesmoke;
+  margin-bottom: 3rem;
+}
+
+.task-input-field{
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  background: whitesmoke;
+}
+
+.task-input-field::placeholder{
+  color: lightskyblue;
+}
+
+.task-input-field:focus{
+  background-color: lightskyblue;
+  transition: all 0.3s ease;
+}
+
+.task-input-field:focus + .add-task-button {
+  background: lightskyblue
+}
+
+.add-task-button{
+  padding: 0.4rem;
+  font-size: 1.5rem;
+  border: none;
+  color: cornflowerblue;
+  background: whitesmoke;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-task-button:hover{
+  background: cornflowerblue;
+  color: whitesmoke;
+}
+
+.task-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-height: 55vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.task-container::-webkit-scrollbar{
+  width: 0.3rem;
+}
+
+.task-container::-webkit-scrollbar-thumb{
+  background: lightskyblue;
+}
+
+.task-item{
+  list-style: none;
+  width: 19.4rem;
+}
+
+.task {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+  cursor: pointer;
+  padding: 0.4rem;
+  transition: all 0.3s ease;
+}
+
+.task li{
+  flex: 1;
+}
+
+.task:nth-child(odd) {
+  background: hsl(219, 79%, 70%);
+}
+
+.completed{
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.task button{
+  font-size: 1.4rem;
+  margin-left: 0.5rem;
+  background-color: transparent;
+  color: whitesmoke;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease
+}
+
+.edit-task-button:hover{
+  transform: scale(1.2);
+  color: green;
+  }
+
+.delete-task-button:hover{
+  transform: scale(1.2);
+  color: crimson;
+}
+
+.fa-solid {
+  pointer-events: none;
+}
+
+.notification {
+  position: absolute;
+  font-size: 1.3rem;
+  font-weight: 600;
+  width: 24rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: crimson;
+  top: -4rem;
+  color: whitesmoke;
+  transition: 0.3s top ease-in-out;
+}
+
+.notification-enter {
+  top: 1rem;
+} 
